@@ -3,14 +3,10 @@ Type "help", "copyright", "credits" or "license()" for more information.
 >>> # coding=utf-8
 #!/usr/bin/env python3
 
-""" 
-
-"""
-
 __author__ = "Hichigo TurkHackTeam"
 __license__ = "GPLv3"
 __version__ = "1.5.0"
-__status__ = "Geliþtiriliyor"
+__status__ = "GeliÃ¾tiriliyor"
 
 from requests.sessions import Session
 from requests import get
@@ -24,7 +20,7 @@ BANNER = """
    dBP   dBBBBBP     dBP      dBP dBP dBP `BBBBb   dBP      dBP BB       `BBBBb  dBBBP'   dBP BB   dB'dB'dB' 
   dBP   dBP dBP     dBP      dBP dBP dBP     dBP  dBP      dBP  BB          dBP dBP      dBP  BB  dB'dB'dB'  
  dBP   dBP dBP     dBP      dBP dBP dBP dBBBBP'  dBP      dBBBBBBB     dBBBBP' dBP      dBBBBBBB dB'dB'dB'   
-    Yapýmcý: Hichigo THT
+    YapÃ½mcÃ½: Hichigo THT
 """
 
 USER_AGENTS = ["Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0",
@@ -141,13 +137,13 @@ def DoitAnakin(reportedGuy,reportedGuyID,username,password,proxy):
         insta.Login()
         result = insta.Spam(reportedGuy,reportedGuyID)
         if insta.loggedIn == True and result == True:
-            Success(username,"Baþarýyla SPAM atýldý!")
+            Success(username,"BaÃ¾arÃ½yla SPAM atÃ½ldÃ½!")
         elif insta.loggedIn == True and result == False:
-            Fail(username,"Giriþ baþarýlý ama SPAM atýlmasý baþarýsýz!")
+            Fail(username,"GiriÃ¾ baÃ¾arÃ½lÃ½ ama SPAM atÃ½lmasÃ½ baÃ¾arÃ½sÃ½z!")
         elif insta.loggedIn == False:
-            Fail(username,"Giriþ baþarýsýz!")
+            Fail(username,"GiriÃ¾ baÃ¾arÃ½sÃ½z!")
     except:
-        Fail(username,"Giriþ yapýlýrken hata oluþtu!")
+        Fail(username,"GiriÃ¾ yapÃ½lÃ½rken hata oluÃ¾tu!")
 
 if __name__ == "__main__":
     init()
@@ -160,11 +156,11 @@ if __name__ == "__main__":
 
 
     print(Fore.RED + BANNER + Style.RESET_ALL)
-    Status(str(len(USERS)) + " Adet Kullanýcý Yüklendi!\n")
-    reportedGuy = input(Fore.GREEN + "SPAM'lanacak Kiþinin Kullanýcý Adý: " + Style.RESET_ALL)
-    reportedGuyID = input(Fore.GREEN + "SPAM'lanacak Kiþinin User ID'si: " + Style.RESET_ALL)
+    Status(str(len(USERS)) + " Adet KullanÃ½cÃ½ YÃ¼klendi!\n")
+    reportedGuy = input(Fore.GREEN + "SPAM'lanacak KiÃ¾inin KullanÃ½cÃ½ AdÃ½: " + Style.RESET_ALL)
+    reportedGuyID = input(Fore.GREEN + "SPAM'lanacak KiÃ¾inin User ID'si: " + Style.RESET_ALL)
     print("")
-    Status("Saldýrý baþlatýlýyor!\n")
+    Status("SaldÃ½rÃ½ baÃ¾latÃ½lÃ½yor!\n")
 
     for user in USERS:
         p = Process(target=DoitAnakin,args=(reportedGuy,reportedGuyID,user.split(" ")[0],user.split(" ")[1],None))
